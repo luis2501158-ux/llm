@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Text Studio: corrige, sugiere y genera texto en español usando OpenAI." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <title>Text Studio</title>
+    <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+    <main class="container">
+        <section class="hero card">
+            <span class="eyebrow">Escritura inteligente</span>
+            <h1>Text Studio</h1>
+            <p class="hero-description">Corrige gramática, mejora estilo o genera textos completos con OpenAI. Escribe una idea y obtén resultados claros y fluidos de inmediato.</p>
+        </section>
+
+        <section class="card form-card">
+            <div class="controls">
+                <div class="input-group">
+                    <label for="mode">Elige una acción</label>
+                    <select id="mode">
+                        <option value="grammar">Corregir gramática</option>
+                        <option value="suggest">Sugerir oraciones</option>
+                        <option value="generate">Generar texto</option>
+                    </select>
+                </div>
+
+                <div class="input-group">
+                    <label for="text">Texto o idea</label>
+                    <textarea id="text" rows="6" placeholder="Escribe una frase, un párrafo o un tema..."></textarea>
+                </div>
+
+                <button id="submit" class="primary-button">Enviar</button>
+            </div>
+        </section>
+
+        <section class="card result-card">
+            <h2>Resultado</h2>
+            <pre id="result">Aquí aparecerá la respuesta del modelo.</pre>
+        </section>
+
+        <section class="card history-card">
+            <div class="history-header">
+                <h2>Historial reciente</h2>
+                <button id="refresh" class="secondary-button">Actualizar historial</button>
+            </div>
+            <ul id="history"></ul>
+        </section>
+    </main>
+
+    <script src="/index.js" defer></script>
+</body>
+</html>
